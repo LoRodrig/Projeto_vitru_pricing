@@ -1,0 +1,147 @@
+<meta charset="utf-8" />
+<title>Monitor de preços EAD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: system-ui, sans-serif; margin: 0; padding: 1.5rem; background: #f4f5f7; }
+  header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.25rem; }
+  h1 { font-size: 1.2rem; margin: 0; }
+  button#sair { border: none; background: none; color: #555; cursor: pointer; text-decoration: underline; }
+  .filtros { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1rem; }
+  .filtros select, .filtros input { padding: 0.4rem; border-radius: 6px; border: 1px solid #ccc; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; }
+  th, td { text-align: left; padding: 0.55rem 0.75rem; border-bottom: 1px solid #eee; font-size: 0.9rem; }
+  th { background: #fafafa; position: sticky; top: 0; }
+  #status { font-size: 0.85rem; color: #777; margin-bottom: 0.5rem; }
+</style>
+
+<header>
+  <h1>Monitor de preços EAD</h1>
+  <button id="sair">Sair</button>
+</header>
+
+<div class="filtros">
+  <select id="filtro-marca"><option value="">Todas as marcas</option></select>
+  <select id="filtro-grupo"><option value="">Todas as áreas</option></select>
+  <input id="filtro-data-inicio" type="date" />
+  <input id="filtro-data-fim" type="date" />
+</div>
+
+<div id="status">Carregando...</div>
+<table id="tabela">
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th>Marca</th>
+      <th>Grupo educacional</th>
+      <th>Curso</th>
+      <th>Área do saber</th>
+      <th>Localização</th>
+      <th>Valor (R$)</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script>
+  const supabase = window.supabase.createClient(window.SUPABASE_URL, window.SUPABASE_ANON_KEY);
+  const LIMITE_LINHAS = 500;
+
+  async function exigirLogin() {
+    const { data } = await supabase.auth.getSession();
+    if (!data.session) window.location.href = "index.html";
+  }
+
+  async function popularFiltros() {
+    const [marcas, grupos] = await Promise.all([
+      supabase.from("marcas").select("id,nome").order("nome"),
+      supabase.from("grupos_curso").select("id,nome").order("nome"),
+    ]);
+
+    const selMarca = document.getElementById("filtro-marca");
+    for (const m of marcas.data || []) {
+      const opt = document.createElement("option");
+      opt.value = m.id;
+      opt.textContent = m.nome;
+      selMarca.appendChild(opt);
+    }
+
+    const selGrupo = document.getElementById("filtro-grupo");
+    for (const g of grupos.data || []) {
+      const opt = document.createElement("option");
+      opt.value = g.id;
+      opt.textContent = g.nome;
+      selGrupo.appendChild(opt);
+    }
+  }
+
+  function formatarValor(v) {
+    return v == null ? "-" : Number(v).toLocaleString("pt-BR", { minimumFractionDigits: 2 });
+  }
+
+  async function carregarDados() {
+    const status = document.getElementById("status");
+    status.textContent = "Carregando...";
+
+    let query = supabase
+      .from("pricing_snapshots")
+      .select(
+        "captured_at, curso_nome, valor, localizacao, marcas(nome, grupos_educacionais(nome)), grupos_curso(nome)"
+      )
+      .order("captured_at", { ascending: false })
+      .limit(LIMITE_LINHAS);
+
+    const marcaId = document.getElementById("filtro-marca").value;
+    const grupoId = document.getElementById("filtro-grupo").value;
+    const dataInicio = document.getElementById("filtro-data-inicio").value;
+    const dataFim = document.getElementById("filtro-data-fim").value;
+
+    if (marcaId) query = query.eq("marca_id", marcaId);
+    if (grupoId) query = query.eq("grupo_curso_id", grupoId);
+    if (dataInicio) query = query.gte("captured_at", dataInicio);
+    if (dataFim) query = query.lte("captured_at", dataFim);
+
+    const { data, error } = await query;
+    const tbody = document.querySelector("#tabela tbody");
+    tbody.innerHTML = "";
+
+    if (error) {
+      status.textContent = "Erro ao carregar dados: " + error.message;
+      return;
+    }
+
+    for (const row of data) {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>${row.captured_at ?? "-"}</td>
+        <td>${row.marcas?.nome ?? "-"}</td>
+        <td>${row.marcas?.grupos_educacionais?.nome ?? "-"}</td>
+        <td>${row.curso_nome ?? "-"}</td>
+        <td>${row.grupos_curso?.nome ?? "-"}</td>
+        <td>${row.localizacao ?? "-"}</td>
+        <td>${formatarValor(row.valor)}</td>
+      `;
+      tbody.appendChild(tr);
+    }
+
+    status.textContent = `${data.length} registro(s)${data.length === LIMITE_LINHAS ? " (limite atingido, refine os filtros)" : ""}`;
+  }
+
+  document.getElementById("sair").addEventListener("click", async () => {
+    await supabase.auth.signOut();
+    window.location.href = "index.html";
+  });
+
+  for (const id of ["filtro-marca", "filtro-grupo", "filtro-data-inicio", "filtro-data-fim"]) {
+    document.getElementById(id).addEventListener("change", carregarDados);
+  }
+
+  (async () => {
+    await exigirLogin();
+    await popularFiltros();
+    await carregarDados();
+  })();
+</script>

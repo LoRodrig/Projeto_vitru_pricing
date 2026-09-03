@@ -1,0 +1,90 @@
+<meta charset="utf-8" />
+<title>Monitor de preços EAD — login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex, nofollow" />
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: system-ui, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background: #f4f5f7;
+  }
+  form {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 320px;
+  }
+  h1 { font-size: 1.1rem; margin: 0 0 1.25rem; }
+  label { display: block; font-size: 0.85rem; margin: 0.75rem 0 0.25rem; }
+  input {
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  button {
+    margin-top: 1.25rem;
+    width: 100%;
+    padding: 0.6rem;
+    border: none;
+    border-radius: 6px;
+    background: #111;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  button:disabled { opacity: 0.6; cursor: default; }
+  #erro { color: #b00020; font-size: 0.85rem; margin-top: 0.75rem; min-height: 1em; }
+</style>
+
+<form id="login-form">
+  <h1>Monitor de preços EAD</h1>
+  <label for="email">E-mail</label>
+  <input id="email" type="email" autocomplete="username" required />
+  <label for="senha">Senha</label>
+  <input id="senha" type="password" autocomplete="current-password" required />
+  <button type="submit">Entrar</button>
+  <div id="erro"></div>
+</form>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<script src="config.js"></script>
+<script>
+  const supabase = window.supabase.createClient(window.SUPABASE_URL, window.SUPABASE_ANON_KEY);
+
+  // já logado? pula direto pro dashboard
+  supabase.auth.getSession().then(({ data }) => {
+    if (data.session) window.location.href = "dashboard.html";
+  });
+
+  const form = document.getElementById("login-form");
+  const erroEl = document.getElementById("erro");
+
+  form.addEventListener("submit", async (ev) => {
+    ev.preventDefault();
+    erroEl.textContent = "";
+    const button = form.querySelector("button");
+    button.disabled = true;
+
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("senha").value;
+
+    const { error } = await supabase.auth.signInWithPassword({ email, password });
+
+    if (error) {
+      erroEl.textContent = "E-mail ou senha inválidos.";
+      button.disabled = false;
+      return;
+    }
+    window.location.href = "dashboard.html";
+  });
+</script>

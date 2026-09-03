@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# planilha de origem: dado interno, não vai pro repositório
+*.xlsx
+*.xls

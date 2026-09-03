@@ -1,0 +1,794 @@
+[
+  {
+    "nome": "AGES",
+    "grupo_educacional": "Ânima",
+    "slug_ead": "ages",
+    "piloto": false
+  },
+  {
+    "nome": "AIEC",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "aiec",
+    "piloto": false
+  },
+  {
+    "nome": "ANHANGUERA",
+    "grupo_educacional": "Cogna",
+    "slug_ead": "anhanguera",
+    "piloto": true
+  },
+  {
+    "nome": "BELAS ARTES",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "belas-artes",
+    "piloto": false
+  },
+  {
+    "nome": "C. UNIVERSITARIO SUMARE",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "c-universitario-sumare",
+    "piloto": false
+  },
+  {
+    "nome": "CASTELO BRANCO",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "castelo-branco",
+    "piloto": false
+  },
+  {
+    "nome": "CATOLICA-SC",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "catolica-sc",
+    "piloto": false
+  },
+  {
+    "nome": "CENSUPEG",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "censupeg",
+    "piloto": false
+  },
+  {
+    "nome": "CLEBER LEITE EDUCACIONAL",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "cleber-leite-educacional",
+    "piloto": false
+  },
+  {
+    "nome": "CNEC JOINVILLE",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "cnec-joinville",
+    "piloto": false
+  },
+  {
+    "nome": "CRUZEIRO DO SUL",
+    "grupo_educacional": "Cruzeiro do Sul",
+    "slug_ead": "cruzeiro-do-sul",
+    "piloto": false
+  },
+  {
+    "nome": "ENIAC",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "eniac",
+    "piloto": false
+  },
+  {
+    "nome": "ESAB",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "esab",
+    "piloto": false
+  },
+  {
+    "nome": "ESTACIO",
+    "grupo_educacional": "Yduqs",
+    "slug_ead": "estacio",
+    "piloto": true
+  },
+  {
+    "nome": "ETEP",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "etep",
+    "piloto": false
+  },
+  {
+    "nome": "FACENS",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "facens",
+    "piloto": false
+  },
+  {
+    "nome": "FACNOPAR",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "facnopar",
+    "piloto": false
+  },
+  {
+    "nome": "FACULDADE JARDINS",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "faculdade-jardins",
+    "piloto": false
+  },
+  {
+    "nome": "FADERGS",
+    "grupo_educacional": "Ânima",
+    "slug_ead": "fadergs",
+    "piloto": false
+  },
+  {
+    "nome": "FAEL",
+    "grupo_educacional": "Ser",
+    "slug_ead": "fael",
+    "piloto": false
+  },
+  {
+    "nome": "FAETEL",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "faetel",
+    "piloto": false
+  },
+  {
+    "nome": "FAM",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "fam",
+    "piloto": false
+  },
+  {
+    "nome": "FAM FACULDADE DE AMERICANA",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "fam-faculdade-de-americana",
+    "piloto": false
+  },
+  {
+    "nome": "FAMA",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "fama",
+    "piloto": false
+  },
+  {
+    "nome": "FATEJ",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "fatej",
+    "piloto": false
+  },
+  {
+    "nome": "FATIPI",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "fatipi",
+    "piloto": false
+  },
+  {
+    "nome": "FDB",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "fdb",
+    "piloto": false
+  },
+  {
+    "nome": "FDPII",
+    "grupo_educacional": "Afya",
+    "slug_ead": "fdpii",
+    "piloto": false
+  },
+  {
+    "nome": "FECAF",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "fecaf",
+    "piloto": false
+  },
+  {
+    "nome": "FGV",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "fgv",
+    "piloto": false
+  },
+  {
+    "nome": "FIG - UNIMESP",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "fig-unimesp",
+    "piloto": false
+  },
+  {
+    "nome": "FMU",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "fmu",
+    "piloto": false
+  },
+  {
+    "nome": "FUMEC",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "fumec",
+    "piloto": false
+  },
+  {
+    "nome": "FVJ",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "fvj",
+    "piloto": false
+  },
+  {
+    "nome": "IBMEC",
+    "grupo_educacional": "Yduqs",
+    "slug_ead": "ibmec",
+    "piloto": false
+  },
+  {
+    "nome": "IBMR",
+    "grupo_educacional": "Ânima",
+    "slug_ead": "ibmr",
+    "piloto": false
+  },
+  {
+    "nome": "IESB",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "iesb",
+    "piloto": false
+  },
+  {
+    "nome": "JOAQUIM NABUCO",
+    "grupo_educacional": "Ser",
+    "slug_ead": "joaquim-nabuco",
+    "piloto": false
+  },
+  {
+    "nome": "MACKENZIE",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "mackenzie",
+    "piloto": false
+  },
+  {
+    "nome": "MESSIANICA",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "messianica",
+    "piloto": false
+  },
+  {
+    "nome": "MULTIVIX",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "multivix",
+    "piloto": false
+  },
+  {
+    "nome": "NEWTON PAIVA",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "newton-paiva",
+    "piloto": false
+  },
+  {
+    "nome": "OPET",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "opet",
+    "piloto": false
+  },
+  {
+    "nome": "PITAGORAS",
+    "grupo_educacional": "Cogna",
+    "slug_ead": "pitagoras",
+    "piloto": false
+  },
+  {
+    "nome": "SAO CAMILO",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "sao-camilo",
+    "piloto": false
+  },
+  {
+    "nome": "SAO JUDAS",
+    "grupo_educacional": "Ânima",
+    "slug_ead": "sao-judas",
+    "piloto": false
+  },
+  {
+    "nome": "SENAC SP",
+    "grupo_educacional": "SISTEMA S",
+    "slug_ead": "senac-sp",
+    "piloto": false
+  },
+  {
+    "nome": "SENACRS",
+    "grupo_educacional": "SISTEMA S",
+    "slug_ead": "senacrs",
+    "piloto": false
+  },
+  {
+    "nome": "SENACSP",
+    "grupo_educacional": "SISTEMA S",
+    "slug_ead": "senacsp",
+    "piloto": false
+  },
+  {
+    "nome": "SENAI - FACULDADE DA INDUSTRIA",
+    "grupo_educacional": "SISTEMA S",
+    "slug_ead": "senai-faculdade-da-industria",
+    "piloto": false
+  },
+  {
+    "nome": "TREVISAN",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "trevisan",
+    "piloto": false
+  },
+  {
+    "nome": "UAM",
+    "grupo_educacional": "Ânima",
+    "slug_ead": "uam",
+    "piloto": false
+  },
+  {
+    "nome": "UBM",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "ubm",
+    "piloto": false
+  },
+  {
+    "nome": "UCAM",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "ucam",
+    "piloto": false
+  },
+  {
+    "nome": "UCL",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "ucl",
+    "piloto": false
+  },
+  {
+    "nome": "UCS",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "ucs",
+    "piloto": false
+  },
+  {
+    "nome": "ULBRA",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "ulbra",
+    "piloto": false
+  },
+  {
+    "nome": "UMESP",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "umesp",
+    "piloto": false
+  },
+  {
+    "nome": "UNA",
+    "grupo_educacional": "Ânima",
+    "slug_ead": "una",
+    "piloto": false
+  },
+  {
+    "nome": "UNAMA",
+    "grupo_educacional": "Ser",
+    "slug_ead": "unama",
+    "piloto": false
+  },
+  {
+    "nome": "UNEF",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unef",
+    "piloto": false
+  },
+  {
+    "nome": "UNG",
+    "grupo_educacional": "Ser",
+    "slug_ead": "ung",
+    "piloto": false
+  },
+  {
+    "nome": "UNIAMERICA",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "uniamerica",
+    "piloto": false
+  },
+  {
+    "nome": "UNIANDRADE",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "uniandrade",
+    "piloto": false
+  },
+  {
+    "nome": "UNIASSELVI",
+    "grupo_educacional": "UNIASSELVI",
+    "slug_ead": "uniasselvi",
+    "piloto": false
+  },
+  {
+    "nome": "UNIASUAM",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "uniasuam",
+    "piloto": false
+  },
+  {
+    "nome": "UNIAVAN",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "uniavan",
+    "piloto": false
+  },
+  {
+    "nome": "UNIBH",
+    "grupo_educacional": "Ânima",
+    "slug_ead": "unibh",
+    "piloto": false
+  },
+  {
+    "nome": "UNIC",
+    "grupo_educacional": "Cogna",
+    "slug_ead": "unic",
+    "piloto": false
+  },
+  {
+    "nome": "UNICARIOCA",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unicarioca",
+    "piloto": false
+  },
+  {
+    "nome": "UNICESUMAR",
+    "grupo_educacional": "UNICESUMAR",
+    "slug_ead": "unicesumar",
+    "piloto": true
+  },
+  {
+    "nome": "UNICEUB",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "uniceub",
+    "piloto": false
+  },
+  {
+    "nome": "UNICV",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unicv",
+    "piloto": false
+  },
+  {
+    "nome": "UNIDERP",
+    "grupo_educacional": "Cogna",
+    "slug_ead": "uniderp",
+    "piloto": false
+  },
+  {
+    "nome": "UNIEVANGELICA",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unievangelica",
+    "piloto": false
+  },
+  {
+    "nome": "UNIFACS",
+    "grupo_educacional": "Ânima",
+    "slug_ead": "unifacs",
+    "piloto": false
+  },
+  {
+    "nome": "UNIFACVEST",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unifacvest",
+    "piloto": false
+  },
+  {
+    "nome": "UNIFAMAZ",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unifamaz",
+    "piloto": false
+  },
+  {
+    "nome": "UNIFAMMA",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unifamma",
+    "piloto": false
+  },
+  {
+    "nome": "UNIFATECIE",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unifatecie",
+    "piloto": false
+  },
+  {
+    "nome": "UNIFEOB",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unifeob",
+    "piloto": false
+  },
+  {
+    "nome": "UNIFG",
+    "grupo_educacional": "Ânima",
+    "slug_ead": "unifg",
+    "piloto": false
+  },
+  {
+    "nome": "UNIFOR",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unifor",
+    "piloto": false
+  },
+  {
+    "nome": "UNIFSA",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unifsa",
+    "piloto": false
+  },
+  {
+    "nome": "UNIG",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unig",
+    "piloto": false
+  },
+  {
+    "nome": "UNIGOIAS",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unigoias",
+    "piloto": false
+  },
+  {
+    "nome": "UNIGRAN",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unigran",
+    "piloto": false
+  },
+  {
+    "nome": "UNIGRANDE",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unigrande",
+    "piloto": false
+  },
+  {
+    "nome": "UNIGRANRIO",
+    "grupo_educacional": "Afya",
+    "slug_ead": "unigranrio",
+    "piloto": false
+  },
+  {
+    "nome": "UNIITALO",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "uniitalo",
+    "piloto": false
+  },
+  {
+    "nome": "UNIJORGE",
+    "grupo_educacional": "Ilumno",
+    "slug_ead": "unijorge",
+    "piloto": false
+  },
+  {
+    "nome": "UNILASALLE",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unilasalle",
+    "piloto": false
+  },
+  {
+    "nome": "UNIMAR",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unimar",
+    "piloto": false
+  },
+  {
+    "nome": "UNIME",
+    "grupo_educacional": "Cogna",
+    "slug_ead": "unime",
+    "piloto": false
+  },
+  {
+    "nome": "UNINASSAU",
+    "grupo_educacional": "Ser",
+    "slug_ead": "uninassau",
+    "piloto": false
+  },
+  {
+    "nome": "UNINGA",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "uninga",
+    "piloto": false
+  },
+  {
+    "nome": "UNINORTE",
+    "grupo_educacional": "Ser",
+    "slug_ead": "uninorte",
+    "piloto": false
+  },
+  {
+    "nome": "UNINOVE",
+    "grupo_educacional": "UNINOVE",
+    "slug_ead": "uninove",
+    "piloto": false
+  },
+  {
+    "nome": "UNINTA",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "uninta",
+    "piloto": false
+  },
+  {
+    "nome": "UNINTER",
+    "grupo_educacional": "Uninter",
+    "slug_ead": "uninter",
+    "piloto": true
+  },
+  {
+    "nome": "UNIP",
+    "grupo_educacional": "Grupo Unip",
+    "slug_ead": "unip",
+    "piloto": true
+  },
+  {
+    "nome": "UNIPAC",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unipac",
+    "piloto": false
+  },
+  {
+    "nome": "UNIPAR",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unipar",
+    "piloto": false
+  },
+  {
+    "nome": "UNIRITTER",
+    "grupo_educacional": "Ânima",
+    "slug_ead": "uniritter",
+    "piloto": false
+  },
+  {
+    "nome": "UNISA",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unisa",
+    "piloto": false
+  },
+  {
+    "nome": "UNISAGRADO",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unisagrado",
+    "piloto": false
+  },
+  {
+    "nome": "UNISAL",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unisal",
+    "piloto": false
+  },
+  {
+    "nome": "UNISANTA",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unisanta",
+    "piloto": false
+  },
+  {
+    "nome": "UNISANTANNA",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unisantanna",
+    "piloto": false
+  },
+  {
+    "nome": "UNISANTOS",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unisantos",
+    "piloto": false
+  },
+  {
+    "nome": "UNISO",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "uniso",
+    "piloto": false
+  },
+  {
+    "nome": "UNISOCIESC",
+    "grupo_educacional": "Ânima",
+    "slug_ead": "unisociesc",
+    "piloto": false
+  },
+  {
+    "nome": "UNISSUAM",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unissuam",
+    "piloto": false
+  },
+  {
+    "nome": "UNISUAM",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unisuam",
+    "piloto": false
+  },
+  {
+    "nome": "UNISUL",
+    "grupo_educacional": "Ânima",
+    "slug_ead": "unisul",
+    "piloto": false
+  },
+  {
+    "nome": "UNIT",
+    "grupo_educacional": "Unit",
+    "slug_ead": "unit",
+    "piloto": false
+  },
+  {
+    "nome": "UNITAU",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unitau",
+    "piloto": false
+  },
+  {
+    "nome": "UNIUBE",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "uniube",
+    "piloto": false
+  },
+  {
+    "nome": "UNIVAP",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "univap",
+    "piloto": false
+  },
+  {
+    "nome": "UNIVERSIDADE BRASIL",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "universidade-brasil",
+    "piloto": false
+  },
+  {
+    "nome": "UNIVERSO",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "universo",
+    "piloto": false
+  },
+  {
+    "nome": "UNIVILLE",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "univille",
+    "piloto": false
+  },
+  {
+    "nome": "UNIVINTE",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "univinte",
+    "piloto": false
+  },
+  {
+    "nome": "UNOESTE",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unoeste",
+    "piloto": false
+  },
+  {
+    "nome": "UNOPAR",
+    "grupo_educacional": "Cogna",
+    "slug_ead": "unopar",
+    "piloto": false
+  },
+  {
+    "nome": "UNP",
+    "grupo_educacional": "Ânima",
+    "slug_ead": "unp",
+    "piloto": false
+  },
+  {
+    "nome": "USF",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "usf",
+    "piloto": false
+  },
+  {
+    "nome": "UTP",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "utp",
+    "piloto": false
+  },
+  {
+    "nome": "UVA",
+    "grupo_educacional": "Ilumno",
+    "slug_ead": "uva",
+    "piloto": false
+  },
+  {
+    "nome": "UVV",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "uvv",
+    "piloto": false
+  },
+  {
+    "nome": "Unifametro",
+    "grupo_educacional": "Individuais",
+    "slug_ead": "unifametro",
+    "piloto": false
+  },
+  {
+    "nome": "WYDEN",
+    "grupo_educacional": "Yduqs",
+    "slug_ead": "wyden",
+    "piloto": false
+  }
+]
