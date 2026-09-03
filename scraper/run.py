@@ -67,6 +67,8 @@ def main(rodar_todas: bool) -> None:
                         "grupo_curso_id": grupo_curso_id,
                         "valor": oferta.valor,
                         "valor_original": oferta.valor_original,
+                        "modalidade": oferta.modalidade,
+                        "origem": oferta.origem,
                         "localizacao": oferta.localizacao,
                         "source_url": oferta.source_url,
                         "captured_at": hoje,

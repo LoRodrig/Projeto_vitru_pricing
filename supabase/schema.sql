@@ -26,11 +26,20 @@ create table if not exists pricing_snapshots (
     grupo_curso_id bigint references grupos_curso(id),
     valor numeric(10, 2) not null,
     valor_original numeric(10, 2),
+    modalidade text not null default 'EAD',
+    origem text not null default 'ead.com.br',
     localizacao text,
     source_url text not null,
     captured_at date not null default current_date,
     created_at timestamptz not null default now()
 );
+
+-- Migração idempotente: se a tabela já existia (sem essas colunas), este
+-- bloco adiciona sem precisar recriar nada. Seguro rodar de novo.
+alter table pricing_snapshots add column if not exists modalidade text not null default 'EAD';
+alter table pricing_snapshots add column if not exists origem text not null default 'ead.com.br';
+alter table pricing_snapshots add column if not exists desconto boolean
+    generated always as (valor_original is not null and valor_original > valor) stored;
 
 create index if not exists idx_pricing_snapshots_marca on pricing_snapshots(marca_id);
 create index if not exists idx_pricing_snapshots_captured_at on pricing_snapshots(captured_at);

@@ -39,6 +39,10 @@
       <th>Área do saber</th>
       <th>Localização</th>
       <th>Valor (R$)</th>
+      <th>Valor original (R$)</th>
+      <th>Desconto</th>
+      <th>Modalidade</th>
+      <th>Origem</th>
     </tr>
   </thead>
   <tbody></tbody>
@@ -89,7 +93,7 @@
     let query = supabase
       .from("pricing_snapshots")
       .select(
-        "captured_at, curso_nome, valor, localizacao, marcas(nome, grupos_educacionais(nome)), grupos_curso(nome)"
+        "captured_at, curso_nome, valor, valor_original, desconto, modalidade, origem, localizacao, marcas(nome, grupos_educacionais(nome)), grupos_curso(nome)"
       )
       .order("captured_at", { ascending: false })
       .limit(LIMITE_LINHAS);
@@ -123,6 +127,10 @@
         <td>${row.grupos_curso?.nome ?? "-"}</td>
         <td>${row.localizacao ?? "-"}</td>
         <td>${formatarValor(row.valor)}</td>
+        <td>${formatarValor(row.valor_original)}</td>
+        <td>${row.desconto ? "Sim" : "Não"}</td>
+        <td>${row.modalidade ?? "-"}</td>
+        <td>${row.origem ?? "-"}</td>
       `;
       tbody.appendChild(tr);
     }

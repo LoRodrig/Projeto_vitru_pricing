@@ -3,13 +3,13 @@
     "nome": "AGES",
     "grupo_educacional": "Ânima",
     "slug_ead": "ages",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "AIEC",
     "grupo_educacional": "Individuais",
     "slug_ead": "aiec",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "ANHANGUERA",
@@ -21,61 +21,61 @@
     "nome": "BELAS ARTES",
     "grupo_educacional": "Individuais",
     "slug_ead": "belas-artes",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "C. UNIVERSITARIO SUMARE",
     "grupo_educacional": "Individuais",
     "slug_ead": "c-universitario-sumare",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "CASTELO BRANCO",
     "grupo_educacional": "Individuais",
     "slug_ead": "castelo-branco",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "CATOLICA-SC",
     "grupo_educacional": "Individuais",
     "slug_ead": "catolica-sc",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "CENSUPEG",
     "grupo_educacional": "Individuais",
     "slug_ead": "censupeg",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "CLEBER LEITE EDUCACIONAL",
     "grupo_educacional": "Individuais",
     "slug_ead": "cleber-leite-educacional",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "CNEC JOINVILLE",
     "grupo_educacional": "Individuais",
     "slug_ead": "cnec-joinville",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "CRUZEIRO DO SUL",
     "grupo_educacional": "Cruzeiro do Sul",
     "slug_ead": "cruzeiro-do-sul",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "ENIAC",
     "grupo_educacional": "Individuais",
     "slug_ead": "eniac",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "ESAB",
     "grupo_educacional": "Individuais",
     "slug_ead": "esab",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "ESTACIO",
@@ -87,337 +87,337 @@
     "nome": "ETEP",
     "grupo_educacional": "Individuais",
     "slug_ead": "etep",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "FACENS",
     "grupo_educacional": "Individuais",
     "slug_ead": "facens",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "FACNOPAR",
     "grupo_educacional": "Individuais",
     "slug_ead": "facnopar",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "FACULDADE JARDINS",
     "grupo_educacional": "Individuais",
     "slug_ead": "faculdade-jardins",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "FADERGS",
     "grupo_educacional": "Ânima",
     "slug_ead": "fadergs",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "FAEL",
     "grupo_educacional": "Ser",
     "slug_ead": "fael",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "FAETEL",
     "grupo_educacional": "Individuais",
     "slug_ead": "faetel",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "FAM",
     "grupo_educacional": "Individuais",
     "slug_ead": "fam",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "FAM FACULDADE DE AMERICANA",
     "grupo_educacional": "Individuais",
     "slug_ead": "fam-faculdade-de-americana",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "FAMA",
     "grupo_educacional": "Individuais",
     "slug_ead": "fama",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "FATEJ",
     "grupo_educacional": "Individuais",
     "slug_ead": "fatej",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "FATIPI",
     "grupo_educacional": "Individuais",
     "slug_ead": "fatipi",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "FDB",
     "grupo_educacional": "Individuais",
     "slug_ead": "fdb",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "FDPII",
     "grupo_educacional": "Afya",
     "slug_ead": "fdpii",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "FECAF",
     "grupo_educacional": "Individuais",
     "slug_ead": "fecaf",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "FGV",
     "grupo_educacional": "Individuais",
     "slug_ead": "fgv",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "FIG - UNIMESP",
     "grupo_educacional": "Individuais",
     "slug_ead": "fig-unimesp",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "FMU",
     "grupo_educacional": "Individuais",
     "slug_ead": "fmu",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "FUMEC",
     "grupo_educacional": "Individuais",
     "slug_ead": "fumec",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "FVJ",
     "grupo_educacional": "Individuais",
     "slug_ead": "fvj",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "IBMEC",
     "grupo_educacional": "Yduqs",
     "slug_ead": "ibmec",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "IBMR",
     "grupo_educacional": "Ânima",
     "slug_ead": "ibmr",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "IESB",
     "grupo_educacional": "Individuais",
     "slug_ead": "iesb",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "JOAQUIM NABUCO",
     "grupo_educacional": "Ser",
     "slug_ead": "joaquim-nabuco",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "MACKENZIE",
     "grupo_educacional": "Individuais",
     "slug_ead": "mackenzie",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "MESSIANICA",
     "grupo_educacional": "Individuais",
     "slug_ead": "messianica",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "MULTIVIX",
     "grupo_educacional": "Individuais",
     "slug_ead": "multivix",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "NEWTON PAIVA",
     "grupo_educacional": "Individuais",
     "slug_ead": "newton-paiva",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "OPET",
     "grupo_educacional": "Individuais",
     "slug_ead": "opet",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "PITAGORAS",
     "grupo_educacional": "Cogna",
     "slug_ead": "pitagoras",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "SAO CAMILO",
     "grupo_educacional": "Individuais",
     "slug_ead": "sao-camilo",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "SAO JUDAS",
     "grupo_educacional": "Ânima",
     "slug_ead": "sao-judas",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "SENAC SP",
     "grupo_educacional": "SISTEMA S",
     "slug_ead": "senac-sp",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "SENACRS",
     "grupo_educacional": "SISTEMA S",
     "slug_ead": "senacrs",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "SENACSP",
     "grupo_educacional": "SISTEMA S",
     "slug_ead": "senacsp",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "SENAI - FACULDADE DA INDUSTRIA",
     "grupo_educacional": "SISTEMA S",
     "slug_ead": "senai-faculdade-da-industria",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "TREVISAN",
     "grupo_educacional": "Individuais",
     "slug_ead": "trevisan",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UAM",
     "grupo_educacional": "Ânima",
     "slug_ead": "uam",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UBM",
     "grupo_educacional": "Individuais",
     "slug_ead": "ubm",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UCAM",
     "grupo_educacional": "Individuais",
     "slug_ead": "ucam",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UCL",
     "grupo_educacional": "Individuais",
     "slug_ead": "ucl",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UCS",
     "grupo_educacional": "Individuais",
     "slug_ead": "ucs",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "ULBRA",
     "grupo_educacional": "Individuais",
     "slug_ead": "ulbra",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UMESP",
     "grupo_educacional": "Individuais",
     "slug_ead": "umesp",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNA",
     "grupo_educacional": "Ânima",
     "slug_ead": "una",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNAMA",
     "grupo_educacional": "Ser",
     "slug_ead": "unama",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNEF",
     "grupo_educacional": "Individuais",
     "slug_ead": "unef",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNG",
     "grupo_educacional": "Ser",
     "slug_ead": "ung",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIAMERICA",
     "grupo_educacional": "Individuais",
     "slug_ead": "uniamerica",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIANDRADE",
     "grupo_educacional": "Individuais",
     "slug_ead": "uniandrade",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIASSELVI",
     "grupo_educacional": "UNIASSELVI",
     "slug_ead": "uniasselvi",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIASUAM",
     "grupo_educacional": "Individuais",
     "slug_ead": "uniasuam",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIAVAN",
     "grupo_educacional": "Individuais",
     "slug_ead": "uniavan",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIBH",
     "grupo_educacional": "Ânima",
     "slug_ead": "unibh",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIC",
     "grupo_educacional": "Cogna",
     "slug_ead": "unic",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNICARIOCA",
     "grupo_educacional": "Individuais",
     "slug_ead": "unicarioca",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNICESUMAR",
@@ -429,169 +429,169 @@
     "nome": "UNICEUB",
     "grupo_educacional": "Individuais",
     "slug_ead": "uniceub",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNICV",
     "grupo_educacional": "Individuais",
     "slug_ead": "unicv",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIDERP",
     "grupo_educacional": "Cogna",
     "slug_ead": "uniderp",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIEVANGELICA",
     "grupo_educacional": "Individuais",
     "slug_ead": "unievangelica",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIFACS",
     "grupo_educacional": "Ânima",
     "slug_ead": "unifacs",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIFACVEST",
     "grupo_educacional": "Individuais",
     "slug_ead": "unifacvest",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIFAMAZ",
     "grupo_educacional": "Individuais",
     "slug_ead": "unifamaz",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIFAMMA",
     "grupo_educacional": "Individuais",
     "slug_ead": "unifamma",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIFATECIE",
     "grupo_educacional": "Individuais",
     "slug_ead": "unifatecie",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIFEOB",
     "grupo_educacional": "Individuais",
     "slug_ead": "unifeob",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIFG",
     "grupo_educacional": "Ânima",
     "slug_ead": "unifg",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIFOR",
     "grupo_educacional": "Individuais",
     "slug_ead": "unifor",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIFSA",
     "grupo_educacional": "Individuais",
     "slug_ead": "unifsa",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIG",
     "grupo_educacional": "Individuais",
     "slug_ead": "unig",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIGOIAS",
     "grupo_educacional": "Individuais",
     "slug_ead": "unigoias",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIGRAN",
     "grupo_educacional": "Individuais",
     "slug_ead": "unigran",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIGRANDE",
     "grupo_educacional": "Individuais",
     "slug_ead": "unigrande",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIGRANRIO",
     "grupo_educacional": "Afya",
     "slug_ead": "unigranrio",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIITALO",
     "grupo_educacional": "Individuais",
     "slug_ead": "uniitalo",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIJORGE",
     "grupo_educacional": "Ilumno",
     "slug_ead": "unijorge",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNILASALLE",
     "grupo_educacional": "Individuais",
     "slug_ead": "unilasalle",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIMAR",
     "grupo_educacional": "Individuais",
     "slug_ead": "unimar",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIME",
     "grupo_educacional": "Cogna",
     "slug_ead": "unime",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNINASSAU",
     "grupo_educacional": "Ser",
     "slug_ead": "uninassau",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNINGA",
     "grupo_educacional": "Individuais",
     "slug_ead": "uninga",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNINORTE",
     "grupo_educacional": "Ser",
     "slug_ead": "uninorte",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNINOVE",
     "grupo_educacional": "UNINOVE",
     "slug_ead": "uninove",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNINTA",
     "grupo_educacional": "Individuais",
     "slug_ead": "uninta",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNINTER",
@@ -609,186 +609,186 @@
     "nome": "UNIPAC",
     "grupo_educacional": "Individuais",
     "slug_ead": "unipac",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIPAR",
     "grupo_educacional": "Individuais",
     "slug_ead": "unipar",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIRITTER",
     "grupo_educacional": "Ânima",
     "slug_ead": "uniritter",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNISA",
     "grupo_educacional": "Individuais",
     "slug_ead": "unisa",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNISAGRADO",
     "grupo_educacional": "Individuais",
     "slug_ead": "unisagrado",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNISAL",
     "grupo_educacional": "Individuais",
     "slug_ead": "unisal",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNISANTA",
     "grupo_educacional": "Individuais",
     "slug_ead": "unisanta",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNISANTANNA",
     "grupo_educacional": "Individuais",
     "slug_ead": "unisantanna",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNISANTOS",
     "grupo_educacional": "Individuais",
     "slug_ead": "unisantos",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNISO",
     "grupo_educacional": "Individuais",
     "slug_ead": "uniso",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNISOCIESC",
     "grupo_educacional": "Ânima",
     "slug_ead": "unisociesc",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNISSUAM",
     "grupo_educacional": "Individuais",
     "slug_ead": "unissuam",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNISUAM",
     "grupo_educacional": "Individuais",
     "slug_ead": "unisuam",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNISUL",
     "grupo_educacional": "Ânima",
     "slug_ead": "unisul",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIT",
     "grupo_educacional": "Unit",
     "slug_ead": "unit",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNITAU",
     "grupo_educacional": "Individuais",
     "slug_ead": "unitau",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIUBE",
     "grupo_educacional": "Individuais",
     "slug_ead": "uniube",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIVAP",
     "grupo_educacional": "Individuais",
     "slug_ead": "univap",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIVERSIDADE BRASIL",
     "grupo_educacional": "Individuais",
     "slug_ead": "universidade-brasil",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIVERSO",
     "grupo_educacional": "Individuais",
     "slug_ead": "universo",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIVILLE",
     "grupo_educacional": "Individuais",
     "slug_ead": "univille",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNIVINTE",
     "grupo_educacional": "Individuais",
     "slug_ead": "univinte",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNOESTE",
     "grupo_educacional": "Individuais",
     "slug_ead": "unoeste",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNOPAR",
     "grupo_educacional": "Cogna",
     "slug_ead": "unopar",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UNP",
     "grupo_educacional": "Ânima",
     "slug_ead": "unp",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "USF",
     "grupo_educacional": "Individuais",
     "slug_ead": "usf",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UTP",
     "grupo_educacional": "Individuais",
     "slug_ead": "utp",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UVA",
     "grupo_educacional": "Ilumno",
     "slug_ead": "uva",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "UVV",
     "grupo_educacional": "Individuais",
     "slug_ead": "uvv",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "Unifametro",
     "grupo_educacional": "Individuais",
     "slug_ead": "unifametro",
-    "piloto": false
+    "piloto": true
   },
   {
     "nome": "WYDEN",
     "grupo_educacional": "Yduqs",
     "slug_ead": "wyden",
-    "piloto": false
+    "piloto": true
   }
 ]

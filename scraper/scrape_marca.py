@@ -29,6 +29,8 @@ class Oferta:
     valor_original: float | None
     localizacao: str | None
     source_url: str
+    modalidade: str = "EAD"
+    origem: str = "ead.com.br"
 
 
 class MarcaNaoEncontrada(Exception):
@@ -40,6 +42,17 @@ def _to_float(texto: str | None) -> float | None:
         return None
     try:
         return float(texto)
+    except ValueError:
+        return None
+
+
+def _parse_brl(texto: str | None) -> float | None:
+    """Converte 'R$ 561,48' (formato brasileiro) em 561.48."""
+    if not texto:
+        return None
+    numero = texto.replace("R$", "").strip().replace(".", "").replace(",", ".")
+    try:
+        return float(numero)
     except ValueError:
         return None
 
@@ -77,12 +90,15 @@ def scrape_marca(slug: str) -> list[Oferta]:
             else None
         )
 
+        valor_original_el = course_el.select_one(".line-through")
+        valor_original = _parse_brl(valor_original_el.get_text() if valor_original_el else None)
+
         ofertas.append(
             Oferta(
                 curso=name_el.get("content", "").strip(),
                 instituicao=(provider_el.get("content") if provider_el else "").strip(),
                 valor=valor,
-                valor_original=None,
+                valor_original=valor_original,
                 localizacao=location_el.get("content") if location_el else None,
                 source_url=final_url,
             )

@@ -5,7 +5,7 @@ Coleta periódica das mensalidades de cursos EAD de faculdades concorrentes, gua
 ## Como funciona
 
 - **Fonte dos dados**: o agregador [ead.com.br](https://www.ead.com.br) (mesma plataforma de `querobolsa.com.br`) expõe, no HTML puro de cada faculdade, uma lista de ofertas de curso em microdata Schema.org (`Course` → `Offer` → `price`) — sem login, CEP ou JavaScript necessários. **Importante**: essa página mostra uma amostra de ofertas "com bolsa" — poucos cursos distintos por marca —, não o catálogo institucional completo. Valide se esse dado bate com o que você precisa antes de tratar como fonte definitiva.
-- **Scraper** (`scraper/`): roda em Python, busca cada marca, extrai as ofertas e grava em `pricing_snapshots` no Supabase. Hoje está restrito às marcas com `"piloto": true` em `scraper/config/marcas.json`; depois de validar os dados, mude a flag das demais 127 marcas.
+- **Scraper** (`scraper/`): roda em Python, busca cada marca, extrai as ofertas e grava em `pricing_snapshots` no Supabase. Roda para todas as marcas com `"piloto": true` em `scraper/config/marcas.json` (hoje, as 132 marcas cadastradas). Cada snapshot registra também `valor_original` (quando a página mostra um preço "de/por"), `desconto` (coluna calculada: `valor_original > valor`), `modalidade` (hoje sempre `EAD`, único tipo raspado) e `origem` (hoje sempre `ead.com.br`, única fonte).
 - **Automação**: `.github/workflows/scrape.yml` roda o scraper a cada 4 dias via GitHub Actions (grátis) e também pode ser disparado manualmente (aba Actions → "Scraping de preços EAD" → Run workflow).
 - **Banco**: Supabase (Postgres). Ver `supabase/schema.sql` para o esquema completo, com Row Level Security ligado — só quem estiver autenticado lê os dados.
 - **Site** (`site/`): página estática publicada no GitHub Pages via `.github/workflows/deploy-pages.yml`. Login único e compartilhado (ver seção de segurança abaixo).
@@ -34,13 +34,11 @@ Coleta periódica das mensalidades de cursos EAD de faculdades concorrentes, gua
 8. **Habilitar o GitHub Pages** (Settings → Pages → Source: "GitHub Actions").
 9. Disparar manualmente o workflow "Scraping de preços EAD" (aba Actions) para popular os primeiros dados, depois abrir o link do Pages e logar.
 
-## Escalando do piloto para as 132 marcas
+## Todas as 132 marcas ativas
 
-Depois de validar os dados das 5 marcas piloto (`ESTACIO`, `ANHANGUERA`, `UNINTER`, `UNICESUMAR`, `UNIP`) no dashboard:
+Todas as marcas em `scraper/config/marcas.json` estão com `"piloto": true` — o scraper roda para as 132 a cada execução. Se quiser pausar alguma, mude sua flag para `false` e rode `python seed.py` de novo para sincronizar no banco.
 
-1. Edite `scraper/config/marcas.json` e mude `"piloto": false` para `true` nas marcas que quiser ativar (ou rode `python run.py --all` para testar todas de uma vez localmente antes de mudar o workflow).
-2. Rode `python seed.py` de novo para sincronizar as flags no banco.
-3. Alguns slugs em `slug_ead` são um "chute" (nome normalizado); o site costuma redirecionar sozinho para o slug certo, mas se uma marca vier com "nenhuma oferta encontrada" no log do Actions, verifique manualmente a URL em `https://www.ead.com.br/faculdades/{slug}/cursos/a-distancia-ead` e corrija o `slug_ead` no JSON.
+Alguns slugs em `slug_ead` são um "chute" (nome normalizado); o site costuma redirecionar sozinho para o slug certo, mas se uma marca vier com "nenhuma oferta encontrada" no log do Actions, verifique manualmente a URL em `https://www.ead.com.br/faculdades/{slug}/cursos/a-distancia-ead` e corrija o `slug_ead` no JSON.
 
 ## Revisar classificação de cursos
 
