@@ -42,8 +42,22 @@ Alguns slugs em `slug_ead` são um "chute" (nome normalizado); o site costuma re
 
 ## Revisar classificação de cursos
 
-`scraper/classify_curso.py` usa palavras-chave para mapear o nome do curso numa das 10 áreas do saber. Cursos que não batem com nenhuma palavra-chave ficam com área nula no banco — revise periodicamente com uma query tipo:
+`scraper/classify_curso.py` usa palavras-chave para mapear o nome do curso numa das categorias de `scraper/config/grupos_curso.json` (heurística reconstruída sem acesso à regra original — cursos sem match caem em "Outros"). Revise periodicamente com uma query tipo:
 ```sql
-select distinct curso_nome from pricing_snapshots where grupo_curso_id is null;
+select curso_nome, count(*) from pricing_snapshots where grupo_curso_id is null group by 1;
+select curso_nome, count(*) from pricing_snapshots ps join grupos_curso gc on gc.id = ps.grupo_curso_id where gc.nome = 'Outros' group by 1;
 ```
 e adicione as palavras-chave que faltarem em `classify_curso.py`.
+
+## Histórico importado
+
+`scraper/import_historico.py` importa uma série histórica externa (agregada por marca+grupo_curso+data, sem curso individual) para a tabela `pricing_historico`. A view `pricing_serie_temporal` une essa série com os dados novos do scraper (agregados por AVG), no mesmo formato, pra manter uma linha do tempo contínua.
+
+## Preço por polo (grupo Ânima)
+
+Além do `ead.com.br` (preço por curso, sem detalhe de polo), as marcas do grupo educacional **Ânima** (UAM, UNA, IBMR, SAO JUDAS, UNIFACS, UNIRITTER, UNISUL, UNISOCIESC, FADERGS, UNIFG, UNP) expõem, na própria página de cada curso, o preço em **cada polo/unidade física** — não tem endpoint de API, o dado vem embutido no payload da página (framework Nuxt/Vue), por isso o scraper usa um navegador headless (Playwright) em vez de requisição HTTP simples.
+
+- `scraper/config/anima_marcas.json`: catálogo cacheado de domínio → marca → lista de slugs de curso (653 cursos nas 11 marcas). Gerado por `scraper/anima_discover_courses.py` — só precisa rodar de novo se uma marca lançar/remover cursos (não é preciso rodar toda vez).
+- `scraper/anima_scrape.py`: lê esse cache e raspa o preço por polo de cada curso, gravando em `pricing_polo`. Rode `python anima_scrape.py --marca NOME` pra testar só uma marca.
+- `.github/workflows/scrape_anima.yml`: roda semanalmente (mais espaçado que o scraping via `ead.com.br` porque são ~650 páginas, não 132) e também pode ser disparado manualmente.
+- Cobre só EAD por enquanto (Presencial/Semipresencial também aparecem no payload da página, mas ficam de fora). UNIGRANRIO (grupo Afya) tem estrutura de preço por polo parecida mas usa outra plataforma — ainda não investigada.

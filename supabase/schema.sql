@@ -97,6 +97,41 @@ left join grupos_curso gc on gc.id = ph.grupo_curso_id;
 
 grant select on pricing_serie_temporal to authenticated;
 
+-- Preços por polo, raspados direto do site institucional (não de um
+-- agregador). Hoje cobre as marcas do grupo Ânima, que expõem o preço de
+-- cada curso em cada polo (unidade física de apoio) na própria página do
+-- curso. Ver scraper/anima_discover_courses.py (descobre os slugs de curso
+-- de cada marca, resultado cacheado em scraper/config/anima_marcas.json)
+-- e scraper/anima_scrape.py (raspa preço por polo usando esse cache).
+create table if not exists pricing_polo (
+    id bigint generated always as identity primary key,
+    marca_id bigint not null references marcas(id),
+    curso_nome text not null,
+    curso_slug text not null,
+    chave_curso text not null,
+    modalidade text not null default 'EAD',
+    turno text,
+    tipo text,
+    uf text,
+    cidade text,
+    unidade text,
+    preco_bruto numeric(10, 2) not null,
+    preco_desc numeric(10, 2),
+    fonte text not null default 'SITE DA IES',
+    captured_at date not null default current_date,
+    created_at timestamptz not null default now(),
+    unique (marca_id, chave_curso, uf, unidade, captured_at)
+);
+
+create index if not exists idx_pricing_polo_marca on pricing_polo(marca_id);
+create index if not exists idx_pricing_polo_captured_at on pricing_polo(captured_at);
+
+alter table pricing_polo enable row level security;
+
+drop policy if exists "leitura para usuarios autenticados" on pricing_polo;
+create policy "leitura para usuarios autenticados" on pricing_polo
+    for select to authenticated using (true);
+
 -- Row Level Security: ninguém lê ou escreve sem estar autenticado.
 -- Escritas (INSERT/UPDATE) só acontecem via service_role key (que ignora RLS),
 -- usada exclusivamente pelo workflow de scraping no GitHub Actions.
