@@ -3,6 +3,7 @@ __pycache__/
 *.pyc
 .venv/
 venv/
+.pyembed/
 
 # planilha de origem: dado interno, não vai pro repositório
 *.xlsx
