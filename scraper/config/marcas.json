@@ -2,7 +2,7 @@
   {
     "nome": "AGES",
     "grupo_educacional": "Ânima",
-    "slug_ead": "ages",
+    "slug_ead": "uniages-centro-universitario",
     "piloto": true
   },
   {
@@ -26,13 +26,13 @@
   {
     "nome": "C. UNIVERSITARIO SUMARE",
     "grupo_educacional": "Individuais",
-    "slug_ead": "c-universitario-sumare",
+    "slug_ead": "sumare",
     "piloto": true
   },
   {
     "nome": "CASTELO BRANCO",
     "grupo_educacional": "Individuais",
-    "slug_ead": "castelo-branco",
+    "slug_ead": "ucb-castelo-branco",
     "piloto": true
   },
   {
@@ -62,7 +62,7 @@
   {
     "nome": "CRUZEIRO DO SUL",
     "grupo_educacional": "Cruzeiro do Sul",
-    "slug_ead": "cruzeiro-do-sul",
+    "slug_ead": "unicsul-cruzeiro-do-sul",
     "piloto": true
   },
   {
@@ -104,7 +104,7 @@
   {
     "nome": "FACULDADE JARDINS",
     "grupo_educacional": "Individuais",
-    "slug_ead": "faculdade-jardins",
+    "slug_ead": "facjardins-faculdade-jardins",
     "piloto": true
   },
   {
@@ -116,7 +116,7 @@
   {
     "nome": "FAEL",
     "grupo_educacional": "Ser",
-    "slug_ead": "fael",
+    "slug_ead": "fael-faculdade-educacional-da-lapa",
     "piloto": true
   },
   {
@@ -128,7 +128,7 @@
   {
     "nome": "FAM",
     "grupo_educacional": "Individuais",
-    "slug_ead": "fam",
+    "slug_ead": "centro-universitario-fam",
     "piloto": true
   },
   {
@@ -218,7 +218,7 @@
   {
     "nome": "IESB",
     "grupo_educacional": "Individuais",
-    "slug_ead": "iesb",
+    "slug_ead": "iesb-centro-universitario",
     "piloto": true
   },
   {
@@ -248,7 +248,7 @@
   {
     "nome": "NEWTON PAIVA",
     "grupo_educacional": "Individuais",
-    "slug_ead": "newton-paiva",
+    "slug_ead": "newton-paiva-centro-universitario-newton-paiva",
     "piloto": true
   },
   {
@@ -272,7 +272,7 @@
   {
     "nome": "SAO JUDAS",
     "grupo_educacional": "Ânima",
-    "slug_ead": "sao-judas",
+    "slug_ead": "usjt-sao-judas-tadeu",
     "piloto": true
   },
   {
@@ -308,7 +308,7 @@
   {
     "nome": "UAM",
     "grupo_educacional": "Ânima",
-    "slug_ead": "uam",
+    "slug_ead": "anhembi-morumbi",
     "piloto": true
   },
   {
@@ -356,7 +356,7 @@
   {
     "nome": "UNAMA",
     "grupo_educacional": "Ser",
-    "slug_ead": "unama",
+    "slug_ead": "unama-universidade-da-amazonia",
     "piloto": true
   },
   {
@@ -416,7 +416,7 @@
   {
     "nome": "UNICARIOCA",
     "grupo_educacional": "Individuais",
-    "slug_ead": "unicarioca",
+    "slug_ead": "unicarioca-centro-universitario-carioca",
     "piloto": true
   },
   {
@@ -476,7 +476,7 @@
   {
     "nome": "UNIFATECIE",
     "grupo_educacional": "Individuais",
-    "slug_ead": "unifatecie",
+    "slug_ead": "fatecie",
     "piloto": true
   },
   {
@@ -554,7 +554,7 @@
   {
     "nome": "UNIMAR",
     "grupo_educacional": "Individuais",
-    "slug_ead": "unimar",
+    "slug_ead": "unimar-universidade-de-marilia",
     "piloto": true
   },
   {
@@ -620,13 +620,13 @@
   {
     "nome": "UNIRITTER",
     "grupo_educacional": "Ânima",
-    "slug_ead": "uniritter",
+    "slug_ead": "uniritter-centro-universitario-ritter-dos-reis",
     "piloto": true
   },
   {
     "nome": "UNISA",
     "grupo_educacional": "Individuais",
-    "slug_ead": "unisa",
+    "slug_ead": "unisa-universidade-santo-amaro",
     "piloto": true
   },
   {
@@ -686,7 +686,7 @@
   {
     "nome": "UNISUL",
     "grupo_educacional": "Ânima",
-    "slug_ead": "unisul",
+    "slug_ead": "unisul-universidade-do-sul-de-santa-catarina",
     "piloto": true
   },
   {
