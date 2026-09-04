@@ -55,7 +55,7 @@ MARCA_SLUG = {
     "UNINOVE": "uninove",
     "UNIT": "unit-universidade-tiradentes",
     "FDPII": "dom-pedro-ii-unidom",
-    "UNINTER": "uninter",
+    "UNINTER": "uninter",  # preco de pricing_snapshots veio manual (site nao tem oferta no ead.com.br)
 }
 
 EXTRACT_JS = "() => window.__NUXT__?.state?.['campus-directory']?.universityCampuses || null"
