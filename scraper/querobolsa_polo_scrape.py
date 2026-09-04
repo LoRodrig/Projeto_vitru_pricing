@@ -47,7 +47,7 @@ MARCA_SLUG = {
     "ESTACIO": "estacio",
     "WYDEN": "wyden-educacional",
     "CRUZEIRO DO SUL": "unicsul-cruzeiro-do-sul",
-    "SENAC SP": "senac-sp",
+    "SENAC SP": "senac-sp",  # preco de pricing_snapshots veio manual (site nao tem oferta no ead.com.br)
     "SENACRS": "senac-rs",
     "UNIJORGE": "unijorge",
     "UVA": "uva",
