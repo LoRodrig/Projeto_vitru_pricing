@@ -37,7 +37,7 @@ MARCA_SLUG = {
     "PITAGORAS": "pitagoras",
     "UNOPAR": "unopar",
     "UNIC": "unic",
-    "UNIDERP": "uniderp-universidade-anhanguera-uniderp",
+    "UNIDERP": "uniderp-universidade-anhanguera-uniderp",  # preco de pricing_snapshots veio manual (site nao tem oferta no ead.com.br)
     "UNIME": "unime",
     "UNAMA": "unama-universidade-da-amazonia",
     "UNG": "ung",
