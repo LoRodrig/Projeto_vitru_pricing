@@ -13,7 +13,11 @@
   table { width: 100%; border-collapse: collapse; background: #fff; border-radius: 8px; overflow: hidden; }
   th, td { text-align: left; padding: 0.55rem 0.75rem; border-bottom: 1px solid #eee; font-size: 0.9rem; }
   th { background: #fafafa; position: sticky; top: 0; }
-  #status { font-size: 0.85rem; color: #777; margin-bottom: 0.5rem; }
+  #status, #status-polo { font-size: 0.85rem; color: #777; margin-bottom: 0.5rem; }
+  .abas { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+  .abas button { padding: 0.5rem 1rem; border: 1px solid #ccc; background: #fff; border-radius: 6px; cursor: pointer; font-size: 0.9rem; }
+  .abas button.ativa { background: #222; color: #fff; border-color: #222; }
+  [hidden] { display: none !important; }
 </style>
 
 <header>
@@ -21,32 +25,65 @@
   <button id="sair">Sair</button>
 </header>
 
-<div class="filtros">
-  <select id="filtro-marca"><option value="">Todas as marcas</option></select>
-  <select id="filtro-grupo"><option value="">Todas as áreas</option></select>
-  <input id="filtro-data-inicio" type="date" />
-  <input id="filtro-data-fim" type="date" />
+<div class="abas">
+  <button id="aba-curso" class="ativa">Por curso (ead.com.br)</button>
+  <button id="aba-polo">Por polo (site institucional)</button>
 </div>
 
-<div id="status">Carregando...</div>
-<table id="tabela">
-  <thead>
-    <tr>
-      <th>Data</th>
-      <th>Marca</th>
-      <th>Grupo educacional</th>
-      <th>Curso</th>
-      <th>Área do saber</th>
-      <th>Localização</th>
-      <th>Valor (R$)</th>
-      <th>Valor original (R$)</th>
-      <th>Desconto</th>
-      <th>Modalidade</th>
-      <th>Origem</th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+<div id="painel-curso">
+  <div class="filtros">
+    <select id="filtro-marca"><option value="">Todas as marcas</option></select>
+    <select id="filtro-grupo"><option value="">Todas as áreas</option></select>
+    <input id="filtro-data-inicio" type="date" />
+    <input id="filtro-data-fim" type="date" />
+  </div>
+
+  <div id="status">Carregando...</div>
+  <table id="tabela">
+    <thead>
+      <tr>
+        <th>Data</th>
+        <th>Marca</th>
+        <th>Grupo educacional</th>
+        <th>Curso</th>
+        <th>Área do saber</th>
+        <th>Localização</th>
+        <th>Valor (R$)</th>
+        <th>Valor original (R$)</th>
+        <th>Desconto</th>
+        <th>Modalidade</th>
+        <th>Origem</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+<div id="painel-polo" hidden>
+  <div class="filtros">
+    <select id="filtro-marca-polo"><option value="">Todas as marcas</option></select>
+    <select id="filtro-uf-polo"><option value="">Todos os UFs</option></select>
+    <input id="filtro-curso-polo" type="text" placeholder="Buscar curso..." />
+  </div>
+
+  <div id="status-polo">Carregando...</div>
+  <table id="tabela-polo">
+    <thead>
+      <tr>
+        <th>Data</th>
+        <th>Marca</th>
+        <th>Curso</th>
+        <th>UF</th>
+        <th>Cidade</th>
+        <th>Unidade (polo)</th>
+        <th>Turno</th>
+        <th>Preço bruto (R$)</th>
+        <th>Preço com desconto (R$)</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <script src="config.js"></script>
@@ -79,6 +116,30 @@
       opt.value = g.id;
       opt.textContent = g.nome;
       selGrupo.appendChild(opt);
+    }
+
+    const selMarcaPolo = document.getElementById("filtro-marca-polo");
+    for (const m of marcas.data || []) {
+      const opt = document.createElement("option");
+      opt.value = m.id;
+      opt.textContent = m.nome;
+      selMarcaPolo.appendChild(opt);
+    }
+  }
+
+  async function popularUfsPolo() {
+    const { data } = await supabase
+      .from("pricing_polo")
+      .select("uf")
+      .not("uf", "is", null)
+      .order("uf");
+    const ufs = [...new Set((data || []).map((r) => r.uf))];
+    const sel = document.getElementById("filtro-uf-polo");
+    for (const uf of ufs) {
+      const opt = document.createElement("option");
+      opt.value = uf;
+      opt.textContent = uf;
+      sel.appendChild(opt);
     }
   }
 
@@ -138,6 +199,52 @@
     status.textContent = `${data.length} registro(s)${data.length === LIMITE_LINHAS ? " (limite atingido, refine os filtros)" : ""}`;
   }
 
+  async function carregarDadosPolo() {
+    const status = document.getElementById("status-polo");
+    status.textContent = "Carregando...";
+
+    let query = supabase
+      .from("pricing_polo")
+      .select("captured_at, curso_nome, uf, cidade, unidade, turno, preco_bruto, preco_desc, marcas(nome)")
+      .order("captured_at", { ascending: false })
+      .limit(LIMITE_LINHAS);
+
+    const marcaId = document.getElementById("filtro-marca-polo").value;
+    const uf = document.getElementById("filtro-uf-polo").value;
+    const curso = document.getElementById("filtro-curso-polo").value.trim();
+
+    if (marcaId) query = query.eq("marca_id", marcaId);
+    if (uf) query = query.eq("uf", uf);
+    if (curso) query = query.ilike("curso_nome", `%${curso}%`);
+
+    const { data, error } = await query;
+    const tbody = document.querySelector("#tabela-polo tbody");
+    tbody.innerHTML = "";
+
+    if (error) {
+      status.textContent = "Erro ao carregar dados: " + error.message;
+      return;
+    }
+
+    for (const row of data) {
+      const tr = document.createElement("tr");
+      tr.innerHTML = `
+        <td>${row.captured_at ?? "-"}</td>
+        <td>${row.marcas?.nome ?? "-"}</td>
+        <td>${row.curso_nome ?? "-"}</td>
+        <td>${row.uf ?? "-"}</td>
+        <td>${row.cidade ?? "-"}</td>
+        <td>${row.unidade ?? "-"}</td>
+        <td>${row.turno ?? "-"}</td>
+        <td>${formatarValor(row.preco_bruto)}</td>
+        <td>${formatarValor(row.preco_desc)}</td>
+      `;
+      tbody.appendChild(tr);
+    }
+
+    status.textContent = `${data.length} registro(s)${data.length === LIMITE_LINHAS ? " (limite atingido, refine os filtros)" : ""}`;
+  }
+
   document.getElementById("sair").addEventListener("click", async () => {
     await supabase.auth.signOut();
     window.location.href = "index.html";
@@ -146,6 +253,30 @@
   for (const id of ["filtro-marca", "filtro-grupo", "filtro-data-inicio", "filtro-data-fim"]) {
     document.getElementById(id).addEventListener("change", carregarDados);
   }
+
+  for (const id of ["filtro-marca-polo", "filtro-uf-polo"]) {
+    document.getElementById(id).addEventListener("change", carregarDadosPolo);
+  }
+  document.getElementById("filtro-curso-polo").addEventListener("input", carregarDadosPolo);
+
+  let poloCarregado = false;
+  document.getElementById("aba-curso").addEventListener("click", () => {
+    document.getElementById("aba-curso").classList.add("ativa");
+    document.getElementById("aba-polo").classList.remove("ativa");
+    document.getElementById("painel-curso").hidden = false;
+    document.getElementById("painel-polo").hidden = true;
+  });
+  document.getElementById("aba-polo").addEventListener("click", async () => {
+    document.getElementById("aba-polo").classList.add("ativa");
+    document.getElementById("aba-curso").classList.remove("ativa");
+    document.getElementById("painel-polo").hidden = false;
+    document.getElementById("painel-curso").hidden = true;
+    if (!poloCarregado) {
+      poloCarregado = true;
+      await popularUfsPolo();
+      await carregarDadosPolo();
+    }
+  });
 
   (async () => {
     await exigirLogin();
